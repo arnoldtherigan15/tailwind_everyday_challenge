@@ -1,5 +1,7 @@
 # tailwind_everyday_challenge
 
+## Learning Resources
+
 https://www.youtube.com/watch?v=_H38A6E8Nsg&t=291s
 
 https://www.youtube.com/watch?v=DXJFp-wRF4M
