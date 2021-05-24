@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bg-body {
+            background-color: #deebdd;
+            background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+        }
+    </style>
+    <title>Navbar Responsive</title>
+</head>
+
+<body class="bg-body min-h-screen">
+    <nav class="bg-white">
+        <div class="max-w-7xl mx-auto flex justify-between p-4">
+            <div class="flex justify-center items-center space-x-2">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1>Globe</h1>
+            </div>
+            <div class="hidden md:flex items-center justify-between space-x-10">
+                <a>About us</a>
+                <a>How it works</a>
+                <div class="flex items-center space-x-1">
+                    <p>Explore</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="flex items-center space-x-1 relative">
+                    <p>Impact</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <!-- ! Cart -->
+                <div class="cart-mobile md:flex mr-2 relative">
+                    <div
+                        class="absolute -top-2 -right-3 rounded-xl text-white text-2xs bg-green-500 px-2 text-center flex justify-center">
+                        12
+                    </div>
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <!-- ! User Profile -->
+                <div class="dropdown-profile-button hidden md:flex items-center relative cursor-pointer">
+                    <div
+                        class="hidden dropdown-profile absolute top-14 py-4 md:-left-16 lg:-left-12 bg-white rounded-md shadow-2xl">
+                        <!-- <div class="absolute top-0 inset-x-0 mx-auto w-4 h-2 bg-gray-500"> -->
+                        <div class="absolute -top-3 inset-x-0 mx-auto w-6 overflow-hidden">
+                            <div class="h-4 w-4 bg-white rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <div class="px-4 hover:bg-gray-200">
+                            <div class="py-1 flex gap-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <a href="">Account</a>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <div class="px-4 hover:bg-gray-200">
+                            <div class="py-1 flex gap-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                                <a href="" class="text-gray-400">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="w-8 h-8 rounded-full object-cover"
+                        src="https://images.unsplash.com/photo-1541855492-581f618f69a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="avatar">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <!-- ! Hamburger -->
+                <div class="mobile-menu-button md:hidden flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+                <!-- ! EXIT -->
+                <div class="mobile-menu-exit-button hidden md:hidden">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ! Mobile Dropdown -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="max-w-7xl mx-auto flex flex-col gap-4">
+                <a href="" class="py-2 cursor-pointer hover:bg-gray-100 block px-4">About us</a>
+                <a href="" class="py-2 px-4 hover:bg-gray-100">How it works</a>
+                <div class="flex flex-col px-4">
+                    <p class="mb-4">Explore</p>
+                    <div class="flex flex-col gap-y-4">
+                        <div class="flex items-center gap-x-3 hover:bg-gray-100">
+                            <div>
+                                <img class="w-16" src="https://image.flaticon.com/icons/png/128/364/364991.png" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Bundles</p>
+                                <span class="text-gray-400 text-sm">Spread your support, diversify impact</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-3 hover:bg-gray-100">
+                            <div>
+                                <img class="w-16" src="https://image.flaticon.com/icons/png/128/220/220188.png" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Projects</p>
+                                <span class="text-gray-400 text-sm">34 Projects from all over the world</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col px-4">
+                    <p class="mb-4">Impact</p>
+                    <div class="flex flex-col gap-y-4">
+                        <div class="flex items-center gap-x-3 hover:bg-gray-100">
+                            <div>
+                                <img class="w-16" src="https://image.flaticon.com/icons/png/128/284/284480.png" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">My Impact</p>
+                                <span class="text-gray-400 text-sm">Carbon compensation</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-3 hover:bg-gray-100">
+                            <div>
+                                <img class="w-16" src="https://image.flaticon.com/icons/png/128/220/220163.png"" alt="">
+                            </div>
+                            <div>
+                                <p class=" font-semibold">Globe's Imapact</p>
+                                <span class="text-gray-400 text-sm">We're helping the world</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bg-gray-100 max-w-7xl mx-auto flex flex-col p-4 gap-4 mt-4">
+                <div class="py-1 flex gap-x-2 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <a href="">Account</a>
+                </div>
+                <div class="py-1 flex gap-x-2 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <a href="" class="text-gray-400">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        const cart_menu = document.querySelector(".cart-mobile");
+        const exit_btn = document.querySelector(".mobile-menu-exit-button");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden")
+            cart_menu.classList.toggle("hidden")
+            exit_btn.classList.toggle("hidden")
+            btn.classList.toggle("hidden")
+        })
+
+        exit_btn.addEventListener("click", () => {
+            cart_menu.classList.toggle("hidden")
+            menu.classList.toggle("hidden")
+            exit_btn.classList.toggle("hidden")
+            btn.classList.toggle("hidden")
+        })
+
+        //  dropdown profile
+        const btnProfileDropDown = document.querySelector(".dropdown-profile-button");
+        const menuProfile = document.querySelector(".dropdown-profile");
+        btnProfileDropDown.addEventListener("click", () => {
+            menuProfile.classList.toggle("hidden")
+            setTimeout(() => {
+                menuProfile.classList.toggle("hidden")
+            }, 3000);
+        })
+    </script>
+</body>
+
+</html>
