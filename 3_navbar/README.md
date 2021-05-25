@@ -1,4 +1,4 @@
-# 2 Responsive Navbar
+# 3 Responsive Navbar
 
 ![responsive nav](navbarMobile.gif)
 ![responsive nav](navbarDesktop.gif)

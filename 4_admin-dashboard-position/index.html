@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="relative min-h-screen md:flex">
+        <!-- ! Mobile Navbar -->
+        <nav class="bg-gray-800 text-white md:text-gray-800 flex justify-between md:hidden">
+            <div class="p-4 flex items-center space-x-2">
+                <img class="w-5 h-5" src="./assets/logo.svg" alt="logo">
+                <p class="text-md xl:text-xl">
+                    E-Learning
+                </p>
+            </div>
+            <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <!-- ! SideNavbar -->
+        <nav
+            class="sidebar bg-gray-100 pt-10 pb-16 flex flex-col justify-between w-3/5 md:w-64 xl:w-1/5 absolute md:relative md:translate-x-0 inset-y-0 left-0 transform -translate-x-full transation duration-200 ease-in-out z-40">
+            <!-- ! Logo -->
+            <div class="px-10 mb-4">
+                <div class="flex items-center space-x-2">
+                    <img class="w-5 h-5" src="./assets/logo.svg" alt="logo">
+                    <p class="text-md xl:text-xl">
+                        E-Learning
+                    </p>
+                </div>
+                <div class="mt-4">
+                    <!-- ! Menu Item -->
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                        <p>
+                            Dashboard
+                        </p>
+                    </div>
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p>
+                            My Class
+                        </p>
+                    </div>
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                        </svg>
+                        <p>Instructors</p>
+                    </div>
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                        </svg>
+                        <p>Courses</p>
+                    </div>
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                            <path
+                                d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                        </svg>
+                        <p>Group Chats</p>
+                    </div>
+                    <div class="flex space-x-2 items-center hover:bg-white p-4 rounded-2xl hover:shadow-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p>Settings</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ! Hero sidebar -->
+            <div class="mx-auto">
+                <img class="w-40 xl:w-52" src="./assets/sidebar-logo.png" alt="sidebar">
+
+            </div>
+        </nav>
+        <!-- ! Content -->
+        <aside class="px-4 md:px-10 py-4 md:py-11 w-full">
+            <!-- ! Hero -->
+            <div class="">
+                <h1 class="text-gray-800 text-xl">Analytics Overview</h1>
+                <div class="relative rounded-2xl bg-teal p-5 md:p-20 mt-4 mb-4 md:mb-8 text-white md:w-3/4">
+                    <div>
+                        <h1 class="text-2xl font-semibold">Learn with Effectively with Us!</h1>
+                        <p>Get 30% off every course on January</p>
+                    </div>
+                    <div class="mt-4 md:mt-16">
+                        <div class="flex space-x-5">
+                            <div class="flex items-center gap-x-2">
+                                <div class="flex items-center bg-orange rounded-full p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path
+                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                    </svg>
+                                </div>
+                                <div class="text-left text-sm md:text-md">
+                                    <p>Students</p>
+                                    <span>65,000+</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-x-2">
+                                <div class="flex items-center bg-yellow-300 rounded-full p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                                    </svg>
+                                </div>
+                                <div class="text-left text-sm md:text-md">
+                                    <p>Expert Mentors</p>
+                                    <span>250+</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ! hero image -->
+                    <img class="hidden md:flex absolute -bottom-1 -right-24 h-96" src="./assets/hero.png" alt="hero">
+                </div>
+            </div>
+
+            <!-- ! main content -->
+            <div class="mt-8 md:mt-0 grid grid-cos-1 gap-y-8 md:grid-cols-3 gap-x-4">
+                <div class="">
+                    <div class="flex justify-between">
+                        <h1 class="text-xl text-gray-800">Populac Courses</h1>
+                        <div class="p-2 text-gray-400 rounded-lg border-gray-400 border-2 flex items-center">
+                            <p class="text-sm">All Courses</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center w-full mt-4 rounded-lg bg-gray-100 p-2 gap-y-2">
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="w-10 text-white flex justify-center items-center rounded-xl bg-yellow-300">
+                                    <p>U</p>
+                                </div>
+                                <div class="">
+                                    <p>UI/UX Design</p>
+                                    <span>30+ Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-yellow-100 text-gray-800">View Course</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="w-10 flex justify-center items-center rounded-xl bg-red-300">
+                                    <p class="text-white">M</p>
+                                </div>
+                                <div class="">
+                                    <p>Marketing</p>
+                                    <span>25+ Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-red-100 text-gray-800">View Course</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="w-10 flex justify-center items-center rounded-xl bg-green-300">
+                                    <p class="text-white">W</p>
+                                </div>
+                                <div class="">
+                                    <p>Web Development</p>
+                                    <span>45+ Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-green-100 text-gray-800">View Course</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="w-10 text-white flex justify-center items-center rounded-xl bg-pink-300">
+                                    <p>M</p>
+                                </div>
+                                <div class="">
+                                    <p>Mathematics</p>
+                                    <span>50+ Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-pink-100 text-gray-800">View Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex justify-between">
+                        <h1 class="text-xl text-gray-800">Current Activity</h1>
+                    </div>
+                    <div class="mt-6">
+                        <div>
+                            <img src="./assets/graph.png" alt="">
+                        </div>
+                        <div class="mt-4 grid grid-cols-2 gap-x-3 h-28">
+                            <div class="bg-yellow-400 rounded-3xl p-6 text-white">
+                                <h1 class="text-2xl font-bold">45K+</h1>
+                                <p class="text-sm">Completed Course</p>
+                            </div>
+                            <div class="bg-red-400 rounded-3xl p-6 text-white">
+                                <h1 class="text-2xl font-bold">20K+</h1>
+                                <p class="text-sm">Video Course</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex justify-between">
+                        <h1 class="text-xl text-gray-800">Best Instructors</h1>
+                        <div class="text-gray-400 border-gray-400 border-b-2">
+                            <p class="text-sm">See All</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center w-full mt-4 rounded-lg bg-gray-100 p-2 gap-y-2">
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="flex items-center">
+                                    <img class="w-12 h-12 object-cover rounded-full" src="./assets/user1.jpg"
+                                        alt="avatar">
+                                </div>
+                                <div class="">
+                                    <p>Abdullah</p>
+                                    <span class="text-gray-400">5 Design Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-gray-200 text-gray-800">Courses</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="flex items-center">
+                                    <img class="w-12 h-12 object-cover rounded-full" src="./assets/user2.jpg"
+                                        alt="avatar">
+                                </div>
+                                <div class="">
+                                    <p>Ashik</p>
+                                    <span class="text-gray-400">5 Design Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-gray-200 text-gray-800">Courses</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="flex items-center">
+                                    <img class="w-12 h-12 object-cover rounded-full" src="./assets/user3.jpg"
+                                        alt="avatar">
+                                </div>
+                                <div class="">
+                                    <p>Putri</p>
+                                    <span class="text-gray-400">5 Design Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-gray-200 text-gray-800">Courses</button>
+                            </div>
+                        </div>
+                        <!-- ! card -->
+                        <div class="flex justify-between p-2 w-full bg-white rounded-lg">
+                            <div class="flex gap-x-2">
+                                <div class="flex items-center">
+                                    <img class="w-12 h-12 object-cover rounded-full" src="./assets/user4.jpg"
+                                        alt="avatar">
+                                </div>
+                                <div class="">
+                                    <p>Lissa</p>
+                                    <span class="text-gray-400">5 Design Course</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <button class="text-sm rounded-lg p-2 bg-gray-200 text-gray-800">Courses</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        const btn = document.querySelector(".mobile-menu-button")
+        const sidebar = document.querySelector(".sidebar")
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full")
+        })
+    </script>
+</body>
+
+</html>
